@@ -1,147 +1,45 @@
-*{
-    margin: 0px;
-    padding: 0px;
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+main {
     margin: 0;
     background-color: #EBEBEB;
+    padding: 3%;
 }
 
 p {
     font-size: 12px;
 }
 
-.titulares {
-    font-size: 24px;
-}
-
-.descripcion {
-    width: 100%;
-    order: 4;
-}
-
-.descuento, .descripcion {
-    font-size: 16px;
-}
-
-.precio {
-    font-size: 18px;
-    margin: 0;
-    order: 1;
-    flex-grow: 0.3;
-}
-
-.descuento {
-    color: #39b54a;;
-    margin: 0;
-    flex-grow: 0.7;
-    order: 2;
-}
+/* Header */
 
 header {
     background-color: #EAC926;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
-main {
-    margin: 0 auto;
-    width: 90vw;
-}
-
-main section {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-main article {
-    margin-bottom: 10px;
-    background-color: white;
-    width: 15%;
-    flex-grow: 0.15;
-}
-
-main section article i{
-    position: relative;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    color: #39b54a;
-    right: 20px;
-    top: -25px;
-    order: 3;
-    flex-grow: 0;
-}
-
-.boxProducto {
-    border-top: solid 1px #EBEBEB;
-    margin: 0 15px;
-    padding: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-}
- 
-.burger-menu button{
-    background-color: #1259c3;
-    border-radius: 20%;
-    padding: 10px;
-    color: white;
-    border-style: none;
-}
-
-.burger-menu :hover {
-    background-color: #0e469b;
-}
-
-.burger-menu {
-    text-align: center;
-    margin: 5% 0;
-}
-
-.burger-menu .fas {
-    font-size: 2em;
-}
-
-.menuList ul {
-    list-style: none;
-}
-
-.menuList ul a{
-    text-decoration: none;
-    color: black;
-}
-
-img {
-    width: 90%;
-    margin: auto;
-    display: block;
+.menuList {
+    display: none;
+    padding: 0 2%;
 }
 
 .headerImage {
     width: 50%;
-    flex-grow: 0.5;
     margin: 0;
 }
 
 .bannerPresentacion {
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
-    padding: 5%;
-    padding-bottom: 0;
-}
-
-.bannerImage {
     width: 100%;
+    padding: 2%;
 }
 
 .barraBusqueda {
@@ -153,14 +51,15 @@ img {
 
 .barraBusqueda input {
     height: 35px;
+    width: 80%;
     border-radius: 5px;
     padding-left: 5px;
     border-style: none;
 }
 
-.bannerPresentacion button {
+.barraBusqueda button {
     background-color: white;
-    width: 6%;
+    width: 35px;
     height: 35px;
     border-radius: 5px;
     border-style: none;
@@ -168,12 +67,103 @@ img {
     right: 25px;
 }
 
-.cuotasTarjeta{
+.cuotasTarjeta {
     text-align: center;
-    font-size: 15px;
     width: 100%;
-    padding-top: 5%;
+    margin: 2% 0 2% 0;
 }
+
+.burger-menu {
+    text-align: center;
+    margin: 2%;
+}
+
+.burger-menu button {
+    background-color: #1259C3;
+    border-radius: 20%;
+    padding: 10px;
+    color: white;
+    border-style: none;
+}
+
+.burger-menu .fas {
+    font-size: 2em;
+}
+
+.burger-menu :hover {
+    background-color: #0E469B;
+}
+
+.bannerImage {
+    width: 100%;
+}
+
+/* Main */
+
+img {
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+main section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+main article {
+    margin: 0 5% 0 5%;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 100%;
+}
+
+.boxProducto {
+    border-top: solid 1px #EBEBEB;
+    margin: 0 15px;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section article i {
+    position: relative;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39B54A;
+    background-color: #FFF;
+    border-radius: 50%;
+    color: #39B54A;
+    right: 20px;
+    top: -25px;
+    order: 1;
+    flex-grow: 0;
+}
+
+.descuento {
+    color: #39B54A;
+    margin: 0;
+    flex-grow: 0.7;
+    font-size: 16px;
+}
+
+.precio {
+    font-size: 18px;
+    margin: 0;
+    flex-grow: 0.3;
+}
+
+.descripcion {
+    font-size: 16px;
+    display: none;
+    order: 2;
+    width: 100%;
+}
+
+/* Footer */
 
 footer section {
     text-align: center;
@@ -181,64 +171,69 @@ footer section {
 }
 
 footer .fa-solid {
-    color: #1259c3;
+    color: #1259C3;
     margin: 5%;
     font-size: 2em;
 }
 
-footer p {
-    margin: 0;
-    color: #ebebeb;
-}
-
 footer h3 {
-    margin: 0;
-    color: #666;;
+    color: #666;
 }
 
 #copyright {
-    margin-top: 10%;
-    margin-left: 5%;
-    margin-bottom: 5%;
+    margin: 10% 0 5% 5%;
 }
 
-/* VIEW mobile */
+@media (min-width: 768px) {
 
-@media (min-width: 361px) {
-    .descripcion {
+    /* Header */
+
+    .bannerPresentacion {
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .headerImage {
+        width: 35%;
+    }
+
+    .burger-menu {
         display: none;
     }
 
-    nav {
-        display: none;
+    .menuList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    main section {
-        display: block;
+    .menuList ul a {
+        text-decoration: none;
+        color: black;
     }
 
-    main article {
-        width: 100%;
+    .menuList li {
+        padding: 0 10px 15px 10px;
     }
 
-}
-
-/* VIEW tablet */
-
-@media (min-width: 768px){
-    main article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    .menuList ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    nav {
-        display: inline-block;
+    .barraBusqueda button {
+        right: 35%;
     }
 
-    .descripcion {
-        color: #666;
-        margin: 20px 0;
-        display: inline-block;
+    .cuotasTarjeta {
+        width: 50%;
+        font-size: 15px;
     }
+
+    /* Main */
 
     main section {
         display: flex;
@@ -246,57 +241,25 @@ footer h3 {
         justify-content: space-between;
     }
 
-    main section article {
+    main article {
+        box-shadow: 0 0 10px rgb(100, 100, 100);
+        margin: 2%;
         width: 45%;
-        flex-grow: 0.45;
     }
 
-    header {
-        flex-direction: column;
+    .descripcion {
+        color: #666;
+        margin: 20px 0;
+        display: block;
     }
+}
 
-    .bannerPresentacion {
-        justify-content: space-between;
-        padding: 2%;
-    }
-
-    .bannerPresentacion input {
-        height: 35px;
-        width: 100%;
-    }
-
-    .bannerPresentacion button {
-        height: 35px;
-        right: 41%;
-        width: 35px;
-    }
-
-    .headerImage {
+@media (min-width: 1023px) {
+    main article {
         width: 20%;
     }
 
-    .barraBusqueda {
-        width: 25%;
-    }
-
-    .cuotasTarjeta {
-        width: 35%;
-        padding: 0;
-        align-self: center;
-        font-size: 20px;
-    }
-
-    header .menuList {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .menuList ul {
-        display: flex;
-        flex-direction: row;
-        width: 40%;
-        align-items: center;
-        justify-content: space-around;
+    main article :hover {
+        box-shadow: 0 0 10px rgb(100, 100, 100);
     }
 }
