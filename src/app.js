@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const path = require('path')
 const mainRoutes = require('./routes/mainRoutes')
 
 app.use(express.static('../public'))
