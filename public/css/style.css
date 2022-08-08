@@ -32,87 +32,9 @@ body {
     background-color: #EBEBEB;
 }
 
-/* header */
-
-header {
-    background-color: #EAC926;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.bannerPresentacion {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-}
-
-.headerImage {
-    width: 44vw;
-}
-
-.barraBusqueda {
-    width: 44vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.barraBusqueda input {
-    width: 70%;
-    height: 30px;
-    right: 50px;
-    border: 0;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    padding-left: 10px;
-}
-
-.barraBusqueda button {
-    width: 15%;
-    height: 30px;
-    background-color: white;
-    border-style: none;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.cuotasTarjeta {
-    margin-top: 10px;
-}
-
-.menuList {
-    display: none;
-}
-
-.burger-menu {
-    width: 100%;
-    text-align: center;
+.titulares {
+    font-size: 24px;
     margin: 15px 0;
-}
-
-.burger-menu button {
-    background-color: #1259c3;
-    border-radius: 20%;
-    padding: 10px;
-    color: white;
-    border-style: none;
-}
-
-.burger-menu :hover {
-    background-color: #0e469b;
-}
-
-.burger-menu .fas {
-    font-size: 2em;
-}
-
-.bannerImage {
-    width: 100%;
 }
 
 /* main */
@@ -143,8 +65,15 @@ main section article {
 
 .boxProducto {
     border-top: 1px solid #EBEBEB;
-    padding: 0 15px;
+    padding: 15px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxProducto p {
+    padding: 10px 0;
 }
 
 main section article i {
@@ -159,90 +88,29 @@ main section article i {
     background-color: #FFF;
     border-radius: 50%;
     position: relative;
-    bottom: 15px;
+    bottom: 37px;
     right: 5px;
+    flex-grow: 0;
 }
 
 .descuento {
-    width: 70%;
+    font-size: 16px;
+    flex-grow: 7;
+    color: #39b54a;
 }
 
 .precio {
-    width: 30%;
+    flex-grow: 3;
+    font-size: 18px;
 }
 
 .descripcion {
-    display: none;
-}
-
-/* footer */
-
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-footer p {
-    color: #666;
-}
-
-footer section {
-    margin: 10% 0;
-    width: 60%;
-}
-
-footer .fa-solid {
-    font-size: 2em;
-    color: #1259c3;
-    margin-bottom: 10px;
+    color: white;
+    font-size: 16px;
 }
 
 /* tablet */
 @media screen and (min-width: 768px) {
-
-    /* header */
-
-    .bannerPresentacion {
-        text-align: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .headerImage, .barraBusqueda, .cuotasTarjeta {
-        width: 31vw;
-    }
-
-    .menuList {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .menuList ul {
-        display: flex;
-        list-style: none;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
-        font-size: 12px;
-    }
-
-    .menuList ul li {
-        padding: 0 5px;
-    }
-
-    .menuList a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .burger-menu {
-        display: none;
-    }
 
     /* main */
 
@@ -254,21 +122,41 @@ footer .fa-solid {
         box-shadow: 0 0 10px rgb(100, 100, 100);
         width: 45%;
     }
+
+    section article:hover .descripcion {
+        color: #838383;
+        transition: all 1s;
+    }
+
+    .descripcion {
+        order: 2;
+        width: 100%;
+    }
+
 }
 
 /* desktop */
 
 @media screen and (min-width: 1024px) {
-    
-    /* header */
-
-    .bannerPresentacion {
-        justify-content: space-around;
-    }
 
     /* main */
 
     main section article {
-        width: 22%;
+        box-shadow: none
     }
+
+    main section article:hover {
+        box-shadow: 0 0 10px rgb(100, 100, 100);
+    }
+
+    main section article {
+        width: 22%;
+        margin-bottom: 0;
+    }
+
+    section article:hover i {
+        transform: rotate(-90deg);
+        transition: all 1s;
+    }
+
 }

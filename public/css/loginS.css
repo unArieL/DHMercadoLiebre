@@ -5,148 +5,58 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* Header */
-
-header {
-    background-color: #EAC926;
+.login {
     display: flex;
     flex-direction: column;
-}
-
-.bannerPresentacion {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    padding: 2%;
-    align-items: center;
-}
-
-.barraBusqueda {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.barraBusqueda input {
-    height: 35px;
-    width: 80%;
-    border-radius: 5px;
-    padding-left: 5px;
-    border-style: none;
-}
-
-.barraBusqueda button {
-    background-color: white;
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    border-style: none;
-    position: absolute;
-    right: 25px;
-}
-
-.cuotasTarjeta {
-    text-align: center;
-    width: 100%;
-    margin: 2% 0 2% 0;
-}
-
-.burger-menu {
-    text-align: center;
-    margin: 2%;
-}
-
-.burger-menu button {
-    background-color: #1259C3;
-    border-radius: 20%;
-    padding: 10px;
-    color: white;
-    border-style: none;
-}
-
-.burger-menu .fas {
-    font-size: 2em;
-}
-
-.burger-menu :hover {
-    background-color: #0E469B;
-}
-
-.bannerImage {
     width: 100%;
 }
-
-.headerImage {
-    width: 35%;
-}
-
-.burger-menu {
-    display: none;
-}
-
-.menuList {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.menuList ul a {
-    text-decoration: none;
-    color: black;
-}
-
-.menuList li {
-    padding: 0 10px 15px 10px;
-}
-
-.menuList ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.barraBusqueda button {
-    right: 35%;
-}
-
-.cuotasTarjeta {
-    width: 50%;
-    font-size: 15px;
-}
-
-/* Main */
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
 }
 
 main section {
-    
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Footer */
-
-footer section {
-    text-align: center;
-    padding: 0 10%;
+h1 {
+    font-size: 2.5em;
+    margin: 15px 0;
 }
 
-footer .fa-solid {
-    color: #1259C3;
-    margin: 5%;
-    font-size: 2em;
+.login div {
+    margin: 15px 0;
 }
 
-footer h3 {
-    color: #666;
+.login input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 10px;
 }
 
-#copyright {
-    margin: 10% 0 5% 5%;
+.login button {
+    margin: 10px;
+    background-color: #1259c3;
+    border-style: none;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.login button:hover {
+    background-color: #0022AA;
+}
+
+@media screen and (min-width: 1024px) {
+    main section {
+        width: 40%;
+    }
 }

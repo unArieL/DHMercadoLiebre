@@ -1,0 +1,131 @@
+header {
+    background-color: #EAC926;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bannerPresentacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.headerImage {
+    width: 44vw;
+}
+
+.barraBusqueda {
+    width: 44vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barraBusqueda input {
+    width: 70%;
+    height: 30px;
+    right: 50px;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-left: 10px;
+}
+
+.barraBusqueda button {
+    width: 15%;
+    height: 30px;
+    background-color: white;
+    border-style: none;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.cuotasTarjeta {
+    margin-top: 10px;
+}
+
+.menuList {
+    display: none;
+}
+
+.burger-menu {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.burger-menu button {
+    background-color: #1259c3;
+    border-radius: 20%;
+    padding: 10px;
+    color: white;
+    border-style: none;
+}
+
+.burger-menu :hover {
+    background-color: #0e469b;
+}
+
+.burger-menu .fas {
+    font-size: 2em;
+}
+
+.bannerImage {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .bannerPresentacion {
+        text-align: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .headerImage, .barraBusqueda, .cuotasTarjeta {
+        width: 31vw;
+    }
+
+    .menuList {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menuList ul {
+        display: flex;
+        list-style: none;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    .menuList ul li {
+        padding: 0 5px;
+    }
+
+    .menuList a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .bannerPresentacion {
+        justify-content: space-around;
+    }
+
+}
